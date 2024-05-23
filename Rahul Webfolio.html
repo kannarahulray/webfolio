@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Webpage</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Load Bootstrap css & js libraries + Custom js file -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="myscripts.js"></script>
+
+  <!-- Load font family from Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <!-- Custom css attributes -->
+  <style>
+    * {
+      font-family: 'Red Hat Display';
+    }
+    .nav-link.active:hover {
+      background-color: #343a40 !important;
+      color: white !important;
+    }
+    .card {
+      border-radius: 20px; /* Rounded corners */
+      border-width: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: calc(100%-40px);
+      height: 100%;
+      margin: auto;
+      border-radius: 20px 20px 0 0; /* Rounded top corners */
+      object-fit:contain; /* Ensure the image covers the entire space */
+    }    
+    .card-body {
+      padding: 1.5rem;
+    }
+  </style>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+          <a class="navbar-brand mb-0 h1" href="#"><strong>Rahul's Webfolio</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#herocard">Home</a>
+                  <a class="nav-link active" href="#about">About</a>
+                  <a class="nav-link active" href="#proficiencies">Proficiencies</a>
+                  <a class="nav-link active" href="#projects">Projects</a>
+              </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-primary" type="button" onclick="toggleTheme()">Toggle Theme</button>
+          </div>
+      </div>
+  </nav>
+</head>
+
+<body>
+  <!-- Hero card -->
+  <div class="bg-body-secondary d-flex justify-content-between align-items-center" id="herocard" style="height: 100vh;">
+    <div class="container-fluid py-5 px-5 pe-0" style="width: 42%;">
+        <h1 class="display-5 fw-bold">Hi, I'm Rahul Ray Kanna</h1>
+        <p class="col-md-8 fs-4">Year One computing student at Victoria Junior College</p>
+        <a href="https://www.youtube.com/watch?v=0GeQVtZ6Rd4">
+            <button class="btn btn-primary btn-lg" type="button">Click for good vibes</button>
+        </a>
+    </div>
+    <div class="container-fluid" style="width: 58%; height:100%; overflow: hidden;">
+        <img src="images/IMG_2717.JPG" class="h-100 object-fit-cover" alt="Image" style="width: 100%;">
+    </div>
+  </div>
+
+  <!-- About me -->
+  <div class="container mt-5 text-center" style="margin-bottom: 60px;" id="about">
+    <h1><strong>About Me</strong></h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <ul class="list-unstyled" style="font-size: 1.3rem;">
+                <li>My subjects taken are Physics, Computing, Mathematics and Economics.</li>
+                <li>My hobbies are reading, exercising and arguing with myself.</li>
+                <li>I am currently in Drama Club and Students' Council.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div class="container text-center" style="margin-bottom: 20px;" id="proficiencies">
+    <h1><strong><u>My Proficiencies</u></strong></h1>
+  </div>
+  
+
+  <!-- Grid of cards -->
+  <div class="container mt-5" style="margin-bottom: 60px;">
+    <div class="row row-cols-6">
+      <div class="col">
+        <div class="card">
+          <img src="https://www.marinedatascience.co/img/software/logo_python.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">Python</h4>
+            <p class="card-text">Versatile language for various applications</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://logospng.org/download/html-5/logo-html-5-1536.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">HTML</h4>
+            <p class="card-text">Fundamental language for creating web pages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://logospng.org/download/javascript/logo-javascript-icon-512.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">JavaScript</h4>
+            <p class="card-text">Dynamic scripting language for web development</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="http://pngimg.com/uploads/photoshop/photoshop_PNG14.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">Photoshop</h4>
+            <p class="card-text">Powerful software for image editing and design</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fplay-lh.googleusercontent.com%2FyAS9WJJnjlCx77RxIvJSssrixhCdUxnBlM3CuPnQpl8QI3Ez19KreBL4xREc1gtmK_Y&f=1&nofb=1&ipt=7999d6d97214147bd9b24ffda5f8b7d940f93a453d8345bc10842244c57b47d9&ipo=images" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">Onshape</h4>
+            <p class="card-text">Accessible web-based CAD software</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://www.shareicon.net/data/2016/06/24/618244_excel_2000x2000.png" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title">Excel</h4>
+            <p class="card-text">Powerful spreadsheet app for data analysis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="container text-center" id="projects">
+    <h1><strong><u>Projects</u></strong></h1>
+  </div>
+  <div class="container mt-5">
+    <table class="table table-hover">
+        <thead>
+          <tr class="table-active">
+            <td><b>Name</b></td>
+            <td><b>URL</b></td>
+            <td><b>Description</b></td>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PokéDex</td>
+                <td><a href="">Replit</a></td>
+                <td>A Pokémon search engine supporting Pokémon up to Generation 6</td>
+            </tr>
+            <tr>
+                <td>More coming soon...</td>
+                <td>NA</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="bottom-bar bg-body-secondary"  style="margin-top: 60px; padding:20px;">
+    <div class="container">
+      <div class="row">
+        <p>Copyright © 2024 Rahul Ray Kanna</p>
+        <button onclick="window.scrollTo(0, 0);" class="btn btn-outline-primary">Back to Top</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
